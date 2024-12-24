@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Robotics Club</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    rel="stylesheet"/>
+    <script src="index.js"></script>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <header class="logo">
+        <img src="logo.png" alt="img2" class="club-logo">
+        <a href="#">The Robotics Club</a>
+        
+        <nav class="navbar">
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#event">Events</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header> 
+
+    <section class="landing">
+        <h1 class="landingtitle"><i><u>The Robotics Club</u></i></h1>
+        <br>
+        <p>At The Robotics Club, we believe in turning ideas into reality through innovation and collaboration. Our members are driven by a shared passion for technology and creativity, where every project is an opportunity to push the boundaries of what's possible. Whether you're interested in designing robots, exploring artificial intelligence, or learning about the latest advancements in robotics, this club offers a space for everyone to grow and contribute. Together, we are shaping the future of technology, building not just robots, but the tools
+             that will transform the world. Join us in creating the next generation of innovation!</p>
+        <div class="gears">
+            <div class="gear" id="gear1"></div>
+            <div class="gear" id="gear2"></div>
+            <div class="gear" id="gear3"></div>
+        </div>
+    </section>
+    
+    <section class="about-container">
+        <!-- Robotic Arm Section Restored -->
+        <div class="robotic-arm">
+            <div class="base">
+                <div class="gear-base"></div>
+            </div>
+            <div class="arm">
+                <div class="gear-elbow"></div>
+                <div class="elbow"></div>
+                <div class="forearm"></div>
+            </div>
+            <div class="hand"></div>
+        </div>
+
+        <!-- About Us Section -->
+        <section class="about" id="about">
+            <fieldset class="aboutus">
+                <legend><h1><i>Know more about us</i></h1></legend>
+                <br><br>
+                <fieldset>
+                    <p>Welcome to The Robotics Club! We are a passionate group of students dedicated to exploring and advancing the field of robotics. Our club is open to all students who share an interest in robotics and technology, offering opportunities to learn, collaborate, and innovate. Whether you're a beginner or an expert, you'll find a place here to grow your skills and make meaningful contributions to exciting projects.</p>
+                    <p>Our members participate in competitions, workshops, and hands-on projects, working together to build robots and learn about the latest advancements in robotics technology. Join us and be part of a community that pushes the boundaries of technology!</p>
+                </fieldset>
+            </fieldset>
+        </section>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h1>Gallery</h1>
+        <table border=none>
+            <tr>
+                <td><img src="i1.jpeg" alt="i1"></td>
+                <td><img src="i2.png" alt="i2"></td>
+                <td><img src="i3.jpeg" alt="i3"></td>
+            </tr>
+            <tr>
+                <td><img src="i4.jpeg" alt="i4"></td>
+                <td><img src="i5.jpeg" alt="i5"></td>
+                <td><img src="i6.jpeg" alt="i6"></td>
+            </tr>
+            <tr>
+                <td><img src="i7.jpeg" alt="i7"></td>
+                <td><img src="i8.jpeg" alt="i8"></td>
+                <td><img src="i9.jpeg" alt="i9"></td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events" id="event">
+        <div class="eventsheading">
+            <h1>Events</h1>
+        </div>
+        <div class="cards">
+            <div class="cards-container">
+                <div class="card">
+                    <h1></h1>
+                </div>
+                <div class="card">
+                    <img src="ev1.jpeg" alt="event1" width="auto" height="90%">
+                    <p>How to make a microcontroller by yourself</p>
+                </div>
+                <div class="card">
+                    <img src="ev2.jpeg" alt="event2" height="90%">
+                    <p>Level up Arduino</p>
+                </div>
+                <div class="card">
+                    <img src="ev3.jpeg" alt="vent3" height="90%">
+                    <p>Basics of coding and Robotics workshop</p>
+                </div>
+                <div class="card">
+                    <img src="ev4.jpeg" alt="vent3" height="90%">
+                    <p>PCB design workshop</p>
+                </div>
+                <div class="card">
+                    <img src="ev5.jpeg" alt="vent3" height="90%">
+                    <p>Recruiting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contactdetails">
+            <h1>Contact Us</h1>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder=" Enter your name" required>
+                <input type="email" id="email" name="email" placeholder=" Enter your email" required>
+                <input type="text" id="message" name="Message" placeholder=" Enter your message" required>
+                <button type="submit"><b>SUBMIT</b></button>
+            </form>
+            <p id="responseMessage"></p> <!-- To show response from the backend -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="icon facebook" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="icon instagram" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="icon linkedin" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <br>
+            <p>&copy; 2024 The Robotics Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Adding event listener to the form submission
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Send POST request to the backend
+            fetch("http://localhost:3000/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ name, email, message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("responseMessage").innerText = data.message;
+            })
+            .catch(error => {
+                document.getElementById("responseMessage").innerText = "An error occurred. Please try again later.";
+            });
+        });
+    </script>
+
+</body>
+</html>

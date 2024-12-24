@@ -1,0 +1,591 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color: black;
+    color: whitesmoke;
+    margin: 0px;
+}
+
+  
+/* Remove horizontal scrollbar for the entire website */
+body, html {
+    overflow-x: hidden; /* Hides the horizontal scrollbar */
+}
+
+/* Logo container styling */
+header.logo .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between the logo image and text */
+}
+
+/* Logo image styling */
+header.logo .club-logo {
+    width: auto; /* Adjust size as needed */
+    height: 100px;
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    transition: transform 0.3s ease;
+}
+
+header.logo .club-logo:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Header and navigation styles (no changes here) */
+
+header.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(90deg, #000000, #f50202);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+header.logo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+header.logo a:hover {
+    color: #ffc107;
+}
+
+header.logo .navbar {
+    display: flex;
+    gap: 20px;
+}
+
+header.logo .navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header.logo .navbar a:hover {
+    background-color: #ffc107;
+    color: #0d47a1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header.logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header.logo .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header.logo .logo-container {
+        justify-content: center;
+    }
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
+header a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.navbar a{
+    margin: 30px;
+    color: white;
+    text-decoration: none;
+    padding:5px;
+    
+}
+.landing{
+    padding: 150px;
+    background:url("hello.jpeg");
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+.landing h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.landing p{
+    width: 80%;
+    height: 100px;
+    font-family:cursive;
+}
+.events{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.events h1{
+    font-size: 30px;
+
+}
+/* styles.css */
+
+  .gears {
+    margin-left: 85%;
+    margin-top: 10%;
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .gear {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, #888, #333);
+    border: 6px solid #222;
+    transform-origin: center;
+    animation: rotate-clockwise 4s linear infinite;
+  }
+  
+  /* Teeth */
+  .gear::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    clip-path: polygon(
+      50% 0%, 60% 10%, 70% 0%, 80% 10%, 90% 0%, 
+      100% 10%, 90% 20%, 100% 30%, 90% 40%, 100% 50%, 
+      90% 60%, 100% 70%, 90% 80%, 100% 90%, 90% 100%, 
+      80% 90%, 70% 100%, 60% 90%, 50% 100%, 40% 90%, 
+      30% 100%, 20% 90%, 10% 100%, 0% 90%, 10% 80%, 
+      0% 70%, 10% 60%, 0% 50%, 10% 40%, 0% 30%, 
+      10% 20%, 0% 10%, 10% 0%, 20% 10%, 30% 0%, 
+      40% 10%
+    );
+    background: #444;
+  }
+  
+  #gear1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rotate-clockwise 4s linear infinite;
+  }
+  
+  #gear2 {
+    top: 100px;
+    left: 0;
+    animation: rotate-counterclockwise 4s linear infinite;
+  }
+  
+  #gear3 {
+    top: 100px;
+    right: 0;
+    animation: rotate-clockwise 4s linear infinite;
+  }
+  
+  /* Animations */
+  @keyframes rotate-clockwise {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotate-counterclockwise {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  
+.cards{
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable scroll snap */
+    gap: 20px;
+    padding: 20px;
+    background-color: #111111;
+    align-items: center;
+}
+.cards-container {
+    display: flex;
+    gap: 20px;
+}
+.cards {
+    scroll-behavior: smooth;
+}
+.cards::-webkit-scrollbar {
+    display: none;
+}
+/* About section styling */
+.about {
+    background-color: #000000; /* Light gray background for the section */
+    padding: 60px 20px; /* Add padding to the top, bottom, and sides */
+    text-align: center; /* Center-align the content */
+}
+
+/* Aboutus fieldset styling */
+.aboutus {
+    background-color: #0c0b0b; /* White background for the fieldset */
+    border: 2px solid #1976d2; /* Blue border for the fieldset */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    max-width: 900px; /* Limit the width */
+    margin: 0 auto; /* Center the fieldset */
+}
+
+/* Heading inside legend */
+.aboutus legend h1 {
+    font-size: 36px;
+    color: #f8f8f8; /* Blue color for the heading */
+    margin-bottom: 20px;
+}
+
+/* About content fieldset styling */
+.about-content {
+    background-color: #1b1a1a; /* Light background for the content area */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Paragraph styling */
+.about-content p {
+    font-size: 18px;
+    color: #070707; /* Dark text for readability */
+    line-height: 1.6; /* Increase line height for better spacing */
+    margin-bottom: 15px; /* Add space between paragraphs */
+}
+
+/* Optional: Add some spacing between the fieldsets */
+.aboutus fieldset {
+    border: none;
+    margin-bottom: 30px; /* Space between fieldsets */
+}
+/* Gallery Section Styling */
+.gallery {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000000; /* Light background color */
+}
+
+.gallery h1 {
+    font-size: 36px;
+    color: #ffffff; /* Blue color for the header */
+    margin-bottom: 40px;
+    font-family: Arial, sans-serif;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto; /* Center the table */
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd; /* Light border for the table */
+}
+
+td img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Limit the image size */
+    border-radius: 8px; /* Round the corners of the images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect for Images */
+td img:hover {
+    transform: scale(1.1); /* Enlarge the image */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow for the hover effect */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    td {
+        padding: 10px;
+    }
+
+    td img {
+        max-width: 200px; /* Smaller image size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    td img {
+        max-width: 150px; /* Even smaller image size for very small screens */
+    }
+
+    .gallery h1 {
+        font-size: 28px;
+    }
+}
+
+.card {
+    min-width: 200px; /* Card width */
+    height: 150px; /* Card height */
+    background: linear-gradient(135deg, #050505, #000000);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    scroll-snap-align: start; /* Align cards to start when scrolling */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+.card img{
+    background-color: black;
+}
+/* Styling for the body of the robotic arm */
+.robotic-arm {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* The base of the robotic arm */
+.base {
+    width: 50px;
+    height: 50px;
+    background-color: #555;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The gear at the base */
+.gear-base {
+    width: 40px;
+    height: 40px;
+    background-color: #999;
+    border-radius: 50%;
+    position: absolute;
+    animation: rotate-gear 2s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gear teeth */
+.gear-base::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #777;
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    border-radius: 50%;
+}
+
+/* The upper arm part */
+.arm {
+    width: 10px;
+    height: 100px;
+    background-color: #333;
+    position: relative;
+    transform-origin: top center;
+    animation: rotate-arm 4s linear infinite;
+}
+
+/* The elbow joint */
+.elbow {
+    width: 10px;
+    height: 30px;
+    background-color: #333;
+    position: absolute;
+    top: 80px;
+    left: -5px;
+}
+
+/* The gear at the elbow */
+.gear-elbow {
+    width: 25px;
+    height: 25px;
+    background-color: #888;
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+    left: -8px;
+    animation: rotate-gear 2s linear infinite reverse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gear teeth at elbow */
+.gear-elbow::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #777;
+    position: absolute;
+    top: -4px;
+    left: 10px;
+    border-radius: 50%;
+}
+
+/* The forearm part */
+.forearm {
+    width: 10px;
+    height: 80px;
+    background-color: #333;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+/* The hand (robotic hand or gripper) */
+.hand {
+    width: 30px;
+    height: 10px;
+    background-color: #666;
+    position: absolute;
+    top: 105px;
+    left: -10px;
+    border-radius: 5px;
+}
+
+/* Animation for moving the arm */
+@keyframes rotate-arm {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Animation for rotating gears */
+@keyframes rotate-gear {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.about-container{
+    display: flex;
+    padding-left: 20px;
+}
+
+
+.contact{
+    background-color: aquamarine;
+    
+}
+.contactdetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.contactdetails input{
+    display: flex;
+    margin: 10px;
+    width: 300px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    justify-content: center;
+    padding-left: 10px;
+}
+.contactdetails button{
+    width:80px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: green;
+    color: whitesmoke;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 120px;
+}
+/* Footer Styling */
+.footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1976d2; /* Highlight color */
+    transform: scale(1.2); /* Slight enlargement on hover */
+}
+
+/* Individual Icon Colors */
+.icon.facebook:hover {
+    color: #3b5998;
+}
+
+.icon.instagram:hover {
+    color: #e4405f;
+}
+
+.icon.linkedin:hover {
+    color: #0077b5;
+}
